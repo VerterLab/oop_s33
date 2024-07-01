@@ -37,28 +37,16 @@ public class ProgramT {
         studentGroup3.addStudent(lena);
         streamGroup.groupAddStream(studentGroup3);
 
-        // Iterator<Student> iterator = new StudentGroupIterator(studentGroup);
-
-        // while (iterator.hasNext()){
-        // System.out.println(iterator.next());
-        // }
-
-        // for (Student st : studentGroup1) {
-        // System.out.println(st + " ----< ");
-        // }
         ArrayList<Student> arrayList = new ArrayList<>(List.of(ivan, petr, don, bim));
         System.out.println(arrayList + " - until sort");
         Collections.sort(arrayList);
         System.out.println(arrayList + " - after sort");
 
-        ArrayList<StudentGroup> arrList = new ArrayList<>(List.of(studentGroup1, studentGroup2, studentGroup3));
-        System.out.println(arrList + " - until 2 sort");
-        System.out.println(arrList.getFirst().students.toString() + " ------ arrList.stream()");
-        System.out.println(arrList.size() + " ------ arrList.stream()");
-        // System.out.println(o2.stream.size() + "o2.stream.size");
-        Collections.sort(arrList);
-        System.out.println(arrList + " - after 2 sort");
-
-        // System.out.println(streamGroup.getStream());
+        List<StudentGroup> arrList = new ArrayList<>(List.of(studentGroup1, studentGroup2, studentGroup3));
+        System.out.println();
+        System.out.println(arrList + " - until streamGroup sort");
+        // Collections.sort(arrList); // dont work
+        Collections.reverse(arrList);
+        System.out.println(arrList + " - after revers, it works");
     }
 }

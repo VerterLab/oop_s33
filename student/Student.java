@@ -3,7 +3,7 @@
  */
 package student;
 
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student> {
     public String name;
     public int id;
 
@@ -15,13 +15,13 @@ public class Student implements Comparable<Student>{
     @Override
     public String toString() {
         // return "Stud:" + name;
-        return name +" - "+id;
+        return name + " - " + id;
     }
 
     @Override
     public int compareTo(Student o) {
 
-    return o.name.length() - this.name.length();
+        return o.name.length() - this.name.length();
     }
 
 }
